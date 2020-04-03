@@ -41,4 +41,14 @@ public class LeapYearShould {
   void return_true_if_divisible_by_four() {
     assertTrue(leapYear.verify(1996));
   }
+
+  @Test
+  void return_true_if_divisible_by_four_hundred() {
+    assertTrue(leapYear.verify(1600));
+  }
+
+  @Test
+  void return_false_if_divisible_by_one_hundred_but_not_four_hundred() {
+    assertFalse(leapYear.verify(1800));
+  }
 }
